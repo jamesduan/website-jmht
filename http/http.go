@@ -15,10 +15,10 @@ type Dto struct {
 
 func init() {
 	configStatic()
-	configCommonRoutes()
-	configProcRoutes()
-	configTestRoutes()
-	configAd()
+	// configCommonRoutes()
+	// configProcRoutes()
+	// configTestRoutes()
+	views()
 }
 
 func RenderJson(w http.ResponseWriter, v interface{}) {
