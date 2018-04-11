@@ -9,7 +9,6 @@ import (
 	"website-jmht/db"
 	"website-jmht/g"
 	"website-jmht/http"
-	"website-jmht/rpc"
 )
 
 func main() {
@@ -37,7 +36,7 @@ func main() {
 	// go cache.DeleteStaleAgents()
 
 	go http.Start()
-	go rpc.Start()
+	// go rpc.Start()
 
 	sigs := make(chan os.Signal, 1)
 	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)

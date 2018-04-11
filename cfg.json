@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "database": "root:123456@tcp(127.0.0.1:3306)/weiping?loc=Local&parseTime=true",
+    "database": "root:jd123@tcp(127.0.0.1:3306)/weiping?loc=Local&parseTime=true",
     "hosts": "",
     "maxConns": 20,
     "maxIdle": 15,
