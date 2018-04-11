@@ -6,7 +6,6 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"website-jmht/db"
 	"website-jmht/g"
 	"website-jmht/http"
 )
@@ -28,7 +27,7 @@ func main() {
 
 	g.ParseConfig(*cfg)
 
-	db.Init()
+	// db.Init()
 	// cache.Init()
 	// g.InitRedisConnPool()
 	// sender.Start()
