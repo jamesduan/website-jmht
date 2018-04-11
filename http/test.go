@@ -13,7 +13,11 @@ func configTestRoutes() {
 
 func configAd() {
 	http.HandleFunc("/ad", func(w http.ResponseWriter, r *http.Request) {
-		t, _ := template.ParseFiles("templates/ad.html")
-		t.Execute(w, nil)
+		tmpl := template.Must(template.ParseFiles("templates/ad.html"))
+		if r.Method != http.MethodPost {
+			tmpl.Execute(w, nil)
+			return
+		}
+		tmpl.Execute(w, struct{ Success bool }{true})
 	})
 }

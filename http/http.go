@@ -14,6 +14,7 @@ type Dto struct {
 }
 
 func init() {
+	configStatic()
 	configCommonRoutes()
 	configProcRoutes()
 	configTestRoutes()

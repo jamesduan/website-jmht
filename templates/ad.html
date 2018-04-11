@@ -19,13 +19,17 @@
         }
         #header {
             width: 100%;
-            margin-bottom: 10px;
+            /* display: none; */
         }
     </style>
     <script>
-        img.onclick=function(){
-            return false;
-        }
+        
+        $('a').each(function(e, a) {
+            // console.log(e, a)
+            a.removeAttribute('onclick');
+            a.removeAttribute('href');
+        })
+        $('.so').prop('disabled', true);
     </script>
   </head>
   <body>
