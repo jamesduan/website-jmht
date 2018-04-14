@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Motion, spring, TransitionMotion } from 'react-motion';
+import "hover.css"
 
 class MotionDemo extends Component {
     constructor(props) {
@@ -26,7 +27,13 @@ class MotionDemo extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="container">
+                <div className="hvr-grow item"> add to basket</div>
+                <div className="hvr-fade item"> add to basket</div>
+                <div className="hvr-ripple-out item"> add to basket</div>
+                <div className="hvr-ripple-in item"> add to basket</div>
+                <div className="hvr-grow item"> add to basket</div>
+                <div className="hvr-grow item"> add to basket</div>
                 <div style={styles.button} onClick={this.animate}>开始动起来</div>
                 <Motion style={{ height: spring(this.state.height) }}>
                     {
@@ -70,6 +77,7 @@ const styles = {
         borderRadius: 4,
         backgroundColor: '#ffc107',
     },
+    
 }
 
 export default MotionDemo;
