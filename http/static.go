@@ -5,6 +5,6 @@ import (
 )
 
 func configStatic() {
-	fs := http.FileServer(http.Dir("assets/"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	fs := http.FileServer(http.Dir("templates/react-templates/jmht/build/"))
+	http.Handle("/", fs)
 }

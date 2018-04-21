@@ -18,7 +18,7 @@ func init() {
 	// configCommonRoutes()
 	// configProcRoutes()
 	// configTestRoutes()
-	views()
+	// views()
 }
 
 func RenderJson(w http.ResponseWriter, v interface{}) {
