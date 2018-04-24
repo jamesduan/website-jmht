@@ -11,7 +11,11 @@
     "react-fullpage": "^0.1.18",
     "react-motion": "^0.5.2",
     "react-router": "^4.2.0",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-scroll": "^1.7.9",
+    "reactjs-swiper": "^0.1.0",
+    "swiper": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

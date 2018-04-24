@@ -1,0 +1,186 @@
+body {
+    /* font: 16px "PingFang SC", PingFang, sans-serif; */
+    font-family: PingFangSC-Light;
+    /* margin: 20px; */
+    margin: auto;
+  }
+
+  .s-font {
+    font-size: 14px;
+  }
+
+  
+  .l-font {
+    font-size: 16px;
+  }
+  
+  .x-font {
+    font-size: 20px;
+  }
+
+  .xl-font {
+    font-size: 24px;
+  }
+
+  .g-color {
+    color: #FA6C05;
+  }
+
+  .g-default-color {
+    color: #585755;
+  }
+
+  /* ol, ul {
+    padding-left: 30px;
+  } */
+/*   
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+   */
+  .container {
+    /* display: inline-flex; */
+    display: flex;
+    display: -webkit-flex;
+    /* -moz-box-flex: inherit; */
+    /* display: -webkit-inline-flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    flex: 1;
+  }
+
+  .header {
+    height: 10rem;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    position:fixed; top:0px; left:0px;
+    z-index: 100;
+    /* background-image: url("../image/"); */
+    /* padding: 2rem; */
+  }
+
+  .logo {
+    /* background-color: aqua; */
+    width: 224px;
+    height: 41px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .logo img {
+    /* font-size: 18px; */
+    width: 14rem;
+    height: 3.25rem;
+  }
+
+  .navbar {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    /* background-color: bisque; */
+    /* width: 28rem; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    margin-top: 2rem;
+    font-size: 18px;
+  }
+
+  .navbar div {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+
+  .navbar .link {
+    text-decoration:none; 
+    color: #585755;
+  }
+
+  .navbar .link:hover {
+    text-decoration:none; 
+    color: #FA6C05;
+  }
+
+  /* .navbar div:hover{
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    color: #FA6C05;
+  } */
+
+  .content {
+    /* height: 80rem; */
+    height: auto;
+    width: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #FA6C05; */
+  }
+
+  .footer {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #FA6C05; */
+  }
+
+  /* .item {
+    margin: 10px;
+    padding: 10px;
+  } */
