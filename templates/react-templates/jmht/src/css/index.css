@@ -1,6 +1,7 @@
 body {
     /* font: 16px "PingFang SC", PingFang, sans-serif; */
-    font-family: PingFangSC-Light;
+    /* font-family: PingFangSC-Light; */
+    font: 16px "PingFang SC Light" "HanHei-SC","Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
     /* margin: 20px; */
     margin: auto;
   }
@@ -26,8 +27,17 @@ body {
     color: #FA6C05;
   }
 
+  .g-p-color {
+    color: #585755; 
+  }
+
   .g-default-color {
     color: #585755;
+  }
+
+  .g-line-height {
+    line-height: 28px;
+    letter-spacing: 0;
   }
 
   /* ol, ul {
@@ -98,7 +108,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0.9;
+    opacity: 0.98;
     position:fixed; top:0px; left:0px;
     z-index: 100;
     /* background-image: url("../image/"); */
@@ -178,6 +188,10 @@ body {
     align-items: center;
     justify-content: center;
     /* background-color: #FA6C05; */
+  }
+
+  .font-space {
+    word-spacing: 28px;
   }
 
   /* .item {
