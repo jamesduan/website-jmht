@@ -9,8 +9,8 @@ export default class Footer extends Component {
     
     render () {
         return (
-            <div className="footer">
-                <p>广州本源健康产业有限公司@2008-2018</p>
+            <div className="footer g-default-color l-font">
+                <p>©2008-2018 广州本源健康产业有限公司 版权所有</p>
             </div>
         )
     }

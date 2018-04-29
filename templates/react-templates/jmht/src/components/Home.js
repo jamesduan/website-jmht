@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactSwiper from "reactjs-swiper"
 import '../css/home.css'
 import eye from '../image/home/eye.svg'
+import banner1 from '../image/home/home_banner1.jpg'
 
 export default class Home extends Component {
 
@@ -15,7 +16,7 @@ export default class Home extends Component {
 
     render() {
         const items = [{
-            image: 'http://img.mp.itc.cn/upload/20170502/073f32d8f7584aa098b3bd0034f5ac4b_th.jpg',
+            image: banner1,
             title: '图片1',
             // link: 'http://img.mp.itc.cn/upload/20170502/073f32d8f7584aa098b3bd0034f5ac4b_th.jpg'
         }, {
@@ -214,7 +215,7 @@ export default class Home extends Component {
                             <div className="content l-font g-default-color">不能想象，乡下的老茶馆若是消失了，那人们还怎么活下去。那茶叶，粗的；那茶壶，不但粗，还拙笨。窑场上的废壶，瘪的无…</div>
                             <div className="b">
                                 <div className="time">2018-04-10</div>
-                                <div className="count"><img src={eye} /></div>
+                                <div className="count"><img src={eye} alt="查看"/></div>
                                 <div className="num">17</div>
                             </div>
                         </div>
@@ -224,7 +225,7 @@ export default class Home extends Component {
                             <div className="content l-font g-default-color">茶，解渴清心，以品为上。茶滋于水，水籍乎器。茶汤无形，无器不盛。器，为茶之父，道由器传。由茶和器而入的茶道，是…</div>
                             <div className="b">
                                 <div className="time">2018-04-12</div>
-                                <div className="count"><img src={eye} /></div>
+                                <div className="count"><img src={eye} alt=""/></div>
                                 <div className="num">9</div>
                             </div>
                         </div>
@@ -234,7 +235,7 @@ export default class Home extends Component {
                             <div className="content g-default-color">不能想象，乡下的老茶馆若是消失了，那人们还怎么活下去。那茶叶，粗的；那茶壶，不但粗，还拙笨。窑场上的废壶，瘪的无…</div>
                             <div className="b">
                                 <div className="time">2018-04-12</div>
-                                <div className="count"><img src={eye} /></div>
+                                <div className="count"><img src={eye} alt=""/></div>
                                 <div className="num">26</div>
                             </div>
                         </div>
