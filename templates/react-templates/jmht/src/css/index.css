@@ -1,7 +1,7 @@
 body {
     /* font: 16px "PingFang SC", PingFang, sans-serif; */
     /* font-family: PingFangSC-Light; */
-    font: 16px "PingFang SC Light" "HanHei-SC","Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
+    font-family: "PingFang SC Light" "HanHei-SC","Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
     /* margin: 20px; */
     margin: auto;
   }

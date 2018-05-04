@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
+// import './css/index.css';
 import './css/style.scss'
 import 'hover.css'
 // import { Button } from "material-ui";

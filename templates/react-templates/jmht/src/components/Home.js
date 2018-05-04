@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactSwiper from "reactjs-swiper"
-import '../css/home.css'
+// import '../css/home.css'
 import eye from '../image/home/eye.svg'
 import banner1 from '../image/home/home_banner1.jpg'
 
