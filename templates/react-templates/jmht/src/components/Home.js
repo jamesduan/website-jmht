@@ -127,7 +127,7 @@ export default class Home extends Component {
 
         const teaOptions = {
             preloadImages: true,
-            autoplay: 3000,
+            // autoplay: 3000,
             autoplayDisableOnInteraction: false,
             loop: true,
             slidesPerView: 4,
@@ -135,14 +135,14 @@ export default class Home extends Component {
             // effect : 'coverflow',
             // slidesPerView: 3,
             // centeredSlides: true,
-            // navigation: {
-            //     nextEl: '.tea-swiper-button-next',
-            //     prevEl: '.tea-swiper-button-prev',
-            // },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         }
         const rOptions = {
             preloadImages: true,
-            autoplay: 5000,
+            // autoplay: 5000,
             autoplayDisableOnInteraction: false,
             loop: true,
             slidesPerView: 4,
@@ -150,10 +150,10 @@ export default class Home extends Component {
             // effect : 'coverflow',
             // slidesPerView: 3,
             // centeredSlides: true,
-            // navigation: {
-            //     nextEl: '.r-swiper-button-next',
-            //     prevEl: '.r-swiper-button-prev',
-            // },
+            navigation: {
+                nextEl: '.r-swiper-button-next',
+                prevEl: '.r-swiper-button-prev',
+            },
         }
 
         return (
@@ -207,25 +207,19 @@ export default class Home extends Component {
                     <div className="product-series">
                         <div className="title xl-font g-default-color">茶饮系列</div>
                         <div className="product-swiper">
-                            {/* <div className="p1"></div>
-                            <div className="p2"></div>
-                            <div className="p3"></div>
-                            <div className="p4"></div> */}
-                            <ReactSwiper items={teaItems} options={teaOptions} showPagination={true}></ReactSwiper>
-                            <div className="tea-swiper-button-next"></div>
-                            <div className="tea-swiper-button-prev"></div>
+                            <ReactSwiper items={teaItems} options={teaOptions} showPagination={false}></ReactSwiper>
+                            {/* <div className="swiper-button-next"></div>
+                            <div className="swiper-button-prev"></div> */}
                         </div>
                     </div>
                     <div className="product-series">
                         <div className="title xl-font g-default-color">软欧包系列</div>
                         <div className="product-swiper">
-                            {/* <div className="r1"></div>
-                            <div className="r2"></div>
-                            <div className="r3"></div>
-                            <div className="r4"></div> */}
-                            <ReactSwiper items={rItems} options={rOptions} showPagination={true}></ReactSwiper>
-                            <div className="tea-swiper-button-next"></div>
-                            <div className="tea-swiper-button-prev"></div>
+                            <ReactSwiper items={rItems} options={rOptions} showPagination={false}>
+                            </ReactSwiper>
+                            {/* <div className="tea-swiper-button-next " tabIndex="0" role="button" aria-label="Next slide" aria-disabled="false"></div> */}
+                            {/* <div className="r-swiper-button-next"></div>
+                            <div className="r-swiper-button-prev"></div> */}
                         </div>
                     </div>
                 </div>

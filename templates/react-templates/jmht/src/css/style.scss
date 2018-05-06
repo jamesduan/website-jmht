@@ -3,9 +3,9 @@
 
 @include html-font-size;
 
-
+$globalcolor: #eaaf37;
 $container-width: convertPxFormUI(1920px);
-$container-color: #FA6C05;
+$container-color: #eaaf37;
 $product-width: convertPxFormUI(1040px);
 $title-color: #585755;
 $text-color:  #999999;
@@ -601,7 +601,7 @@ $text-color:  #999999;
         text-decoration:none;
 
         &:hover {
-            color: #FA6C05;
+            color: $globalcolor;
             border-bottom-color: $container-color;
             border-bottom-width: convertPxFormUI(2px);
             border-bottom-style: solid;
@@ -621,7 +621,7 @@ $text-color:  #999999;
         @include text-font-x();
         cursor: pointer;
         text-decoration:none;
-        color: #FA6C05;
+        color: $globalcolor;
         border-bottom-color: $container-color;
         border-bottom-width: convertPxFormUI(2px);
         border-bottom-style: solid;
@@ -670,7 +670,7 @@ $text-color:  #999999;
                 text-decoration:none;
         
                 &:hover {
-                    color: #FA6C05;
+                    color:$globalcolor;
                     border-bottom-color: $container-color;
                     border-bottom-width: convertPxFormUI(2px);
                     border-bottom-style: solid;
@@ -692,7 +692,7 @@ $text-color:  #999999;
                 @include text-font-x();
                 cursor: pointer;
                 text-decoration:none;
-                color: #FA6C05;
+                color: $globalcolor;
                 border-bottom-color: $container-color;
                 border-bottom-width: convertPxFormUI(2px);
                 border-bottom-style: solid;
@@ -1207,7 +1207,7 @@ $text-color:  #999999;
                 text-decoration:none;
         
                 &:hover {
-                    color: #FA6C05;
+                    color: $globalcolor;
                     border-bottom-color: $container-color;
                     border-bottom-width: convertPxFormUI(2px);
                     border-bottom-style: solid;
@@ -1229,7 +1229,7 @@ $text-color:  #999999;
                 @include text-font-x();
                 cursor: pointer;
                 text-decoration:none;
-                color: #FA6C05;
+                color: $globalcolor;
                 border-bottom-color: $container-color;
                 border-bottom-width: convertPxFormUI(2px);
                 border-bottom-style: solid;
@@ -1440,7 +1440,7 @@ body {
   }
 
   .g-color {
-    color: #FA6C05;
+    color: $globalcolor;
   }
 
   .g-p-color {
@@ -1583,7 +1583,7 @@ body {
 
   .navbar .link:hover {
     text-decoration:none; 
-    color: #FA6C05;
+    color: $globalcolor;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
   }
@@ -2086,7 +2086,7 @@ body {
 }
 
 .h-store-distribution .mapbox .alalytics .item .text .number {
-    color: #FA6C05;
+    color: $globalcolor;
 }
 
 .h-store-distribution .desc {
@@ -2249,10 +2249,10 @@ body {
     @include flexbox;
     @include justify-content-center;
     @include align-items-center;
-    color: #FA6C05;
+    color: $globalcolor;
     /* background-color: #FA6C05; */
     background-color: transparent;
-    border-color: #FA6C05;
+    border-color: $globalcolor;
 }
 
 .h-cooperation-process .detail:focus {
@@ -2470,4 +2470,49 @@ line-height: convertPxFormUI(28px);
     margin-top: convertPxFormUI(64px);
     margin-left: convertPxFormUI(62px);
     /* height: convertPxFormUI(280px); */
+}
+
+.tea-swiper-button-next {
+    // background-image: url('../image/home/arrow-right.png');
+    // @include image-resize;
+    // width: convertPxFormUI(150px);
+    // height: 48px;
+    // color: #979797;
+    // position: absolute;
+    // top: auto;
+    // width: 27px;
+    // height: 44px;
+    // margin-top: 0px;
+    // z-index: 10;
+    // cursor: pointer;
+    // background-size: 27px 44px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+}
+
+.tea-swiper-button-prev {
+    // background-image: url('../image/home/arrow-left.png');
+    // @include image-resize();
+    // width: convertPxFormUI(150px);
+    // height: 48px;
+    // color: #979797;
+    // position: absolute;
+    // width: 27px;
+    // height: 44px;
+    // margin-top: 0px;
+    // z-index: 10;
+    // cursor: pointer;
+    // background-size: 27px 44px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+}
+
+.r-swiper-button-next {
+    background-image: url('../image/home/arrow-right.png');
+    @include image-resize;
+}
+
+.r-swiper-button-prev {
+    background-image: url('../image/home/arrow-left.png');
+    @include image-resize();
 }
