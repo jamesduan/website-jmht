@@ -79,6 +79,28 @@ $text-color:  #999999;
     justify-content: space-around;  
 }
 
+@mixin align-items-center {
+    /* 09版 */  
+    -webkit-box-align: center;  
+    /* 12版 */  
+    -webkit-align-items: center;  
+    -moz-align-items: center;  
+    -ms-align-items: center;  
+    -o-align-items: center;  
+    align-items: center;  
+}
+
+@mixin justify-content-center {
+    /* 09版 */  
+    -webkit-box-pack: center;  
+    /* 12版 */  
+    -webkit-justify-content: center;  
+    -moz-justify-content: center;  
+    -ms-justify-content: center;  
+    -o-justify-content: center;  
+    justify-content: center;
+}
+
 @mixin space-between {
     // justify-content:space-between;
     /* 09版 */  
@@ -89,6 +111,14 @@ $text-color:  #999999;
     -ms-justify-content: space-between;  
     -o-justify-content: space-between;  
     justify-content: space-between;  
+}
+
+@mixin flexwrap {
+    -webkit-flex-wrap: wrap;  
+    -moz-flex-wrap: wrap;  
+    -ms-flex-wrap: wrap;  
+    -o-flex-wrap: wrap;  
+    flex-wrap: wrap;  
 }
 
 @mixin wordspace {
@@ -156,8 +186,10 @@ $text-color:  #999999;
             .title {
                 margin-top: convertPxFormUI(48px);
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                @include justify-content-center;
+                // align-items: center;
+                @include align-items-center;
 
                 .c-name {
                     color: $title-color;
@@ -177,9 +209,11 @@ $text-color:  #999999;
                 height: auto;
                 margin-top: convertPxFormUI(20px);
                 // @include flex-row();
-                display: flex;
-                display: -webkit-flex;
-                flex-flow: row wrap;
+                // display: flex;
+                // display: -webkit-flex;
+                // flex-flow: row wrap;
+                @include flex-row();
+                @include flexwrap();
                 // justify-content: space-around;
 
                 .img1 {
@@ -250,13 +284,16 @@ $text-color:  #999999;
             // background-color: #F7FFFF;
             background: #FFF7F7;
             @include flex-column();
-            align-items: center;
+            // align-items: center;
+            @include align-items-center;
 
             .title {
                 margin-top: convertPxFormUI(48px);
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center();
+                @include align-items-center;
 
                 .c-name {
                     color: $title-color;
@@ -278,9 +315,12 @@ $text-color:  #999999;
                 height: auto;
                 margin-top: convertPxFormUI(20px);
                 // @include flex-row();
-                display: flex;
-                display: -webkit-flex;
-                flex-flow: row wrap;
+                // display: flex;
+                // display: -webkit-flex;
+                @include flexbox;
+                @include flex-row();
+                @include flexwrap();
+                // flex-flow: row wrap;
                 // justify-content: space-around;
 
                 .img1 {
@@ -323,13 +363,16 @@ $text-color:  #999999;
             height: convertPxFormUI(780px);
             background: #FFFEF7;
             @include flex-column();
-            align-items: center;
+            // align-items: center;
+            @include align-items-center;
 
             .title {
                 margin-top: convertPxFormUI(48px);
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
 
                 .c-name {
                     color: $title-color;
@@ -349,9 +392,12 @@ $text-color:  #999999;
                 height: auto;
                 margin-top: convertPxFormUI(20px);
                 // @include flex-row();
-                display: flex;
-                display: -webkit-flex;
-                flex-flow: row wrap;
+                // display: flex;
+                // display: -webkit-flex;
+                // flex-flow: row wrap;
+                @include flexbox;
+                @include flex-row();
+                @include flexwrap();
                 // justify-content: space-around;
 
                 .img1 {
@@ -427,13 +473,16 @@ $text-color:  #999999;
             height: convertPxFormUI(745px);
             background-color: #F7FFFF;
             @include flex-column();
-            align-items: center;
+            // align-items: center;
+            @include align-items-center;
 
             .title {
                 margin-top: convertPxFormUI(48px);
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
 
                 .c-name {
                     color: $title-color;
@@ -453,9 +502,12 @@ $text-color:  #999999;
                 height: auto;
                 margin-top: convertPxFormUI(20px);
                 // @include flex-row();
-                display: flex;
-                display: -webkit-flex;
-                flex-flow: row wrap;
+                // display: flex;
+                // display: -webkit-flex;
+                // flex-flow: row wrap;
+                @include flexbox;
+                @include flex-row();
+                @include flexwrap();
                 // justify-content: space-around;
 
                 .img1 {
@@ -529,7 +581,8 @@ $text-color:  #999999;
     width: $product-width;
     margin-top: convertPxFormUI(38px);
     @include flex-row();
-    align-items: center;
+    // align-items: center;
+    @include align-items-center;
 
     .name {
         width: convertPxFormUI(160px);
@@ -537,8 +590,10 @@ $text-color:  #999999;
         // background-color: $container-color;
         margin-left: convertPxFormUI(54px);
         @include flex-row();
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
+        @include justify-content-center;
+        @include align-items-center;
         @include wordspace();
         @include text-font-x();
         color:  $title-color ;
@@ -580,8 +635,10 @@ $text-color:  #999999;
     width: $container-width;
     height: auto;
     @include flex-column();
-    align-items: center;
-    justify-content: center;
+    @include justify-content-center;
+    @include align-items-center;
+    // align-items: center;
+    // justify-content: center;
     
     .joinus-type {
         width: $container-width;
@@ -602,8 +659,10 @@ $text-color:  #999999;
                 // background-color: $container-color;
                 margin-left: convertPxFormUI(54px);
                 @include flex-row();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
                 @include wordspace();
                 @include text-font-x();
                 color:  $title-color ;
@@ -625,8 +684,10 @@ $text-color:  #999999;
                 // background-color: $container-color;
                 margin-left: convertPxFormUI(54px);
                 @include flex-row();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
                 @include wordspace();
                 @include text-font-x();
                 cursor: pointer;
@@ -674,14 +735,17 @@ $text-color:  #999999;
             height: convertPxFormUI(334px);
             width: convertPxFormUI(963px);
             @include flex-row();
-            justify-content: space-around;
+            // justify-content: space-around;
+            @include spacearround();
 
             .box1 {
                 border: convertPxFormUI(1px) solid #E5E5E5;
                 width: convertPxFormUI(321px);      
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
 
                 .img {
                     background-image: url("../image/home/join_pic1.png");
@@ -707,8 +771,10 @@ $text-color:  #999999;
                 border-bottom: convertPxFormUI(1px) solid #E5E5E5;
                 width: convertPxFormUI(321px);  
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
 
                 .img {
                     background-image: url("../image/home/join_pic2.png");
@@ -733,8 +799,10 @@ $text-color:  #999999;
                 border: convertPxFormUI(1px) solid #E5E5E5;
                 width: convertPxFormUI(321px);      
                 @include flex-column();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
 
                 .img {
                     background-image: url("../image/home/join_pic3.png");
@@ -773,7 +841,23 @@ $text-color:  #999999;
 
         @include flex-column();
         .p {
-            @include box-p();
+            // @include box-p();
+            letter-spacing: 0;
+            line-height: convertPxFormUI(35px);
+            color: $title-color;
+        }
+
+        .p1 {
+            @include flex-column();
+            // justify-content: center;
+            // align-items: center;
+            @include justify-content-center;
+            @include align-items-center;
+            div {
+                letter-spacing: 0;
+                line-height: 38px;
+                color: $title-color;
+            }
         }
 
         .title {
@@ -783,8 +867,10 @@ $text-color:  #999999;
         .img {
             margin-top: convertPxFormUI(11px);
             @include flex-row();
-            justify-content: center;
-            align-items: center;
+            // justify-content: center;
+            // align-items: center;
+            @include justify-content-center;
+            @include align-items-center;
 
             .i {
                 width: convertPxFormUI(900px);
@@ -818,11 +904,13 @@ $text-color:  #999999;
             height: convertPxFormUI(260px);
             // background-color: green;
             @include flex-row();
-            justify-content: space-around;
+            // justify-content: space-around;
+            @include spacearround();
 
             .p1 {
                 @include flex-column();
-                align-items: center;
+                // align-items: center;
+                @include align-items-center;
 
                 .img1 {
                     width: convertPxFormUI(220px);
@@ -841,7 +929,8 @@ $text-color:  #999999;
 
             .p2 {
                 @include flex-column();
-                align-items: center;
+                // align-items: center;
+                @include align-items-center;
 
                 .img2 {
                      width: convertPxFormUI(220px);
@@ -860,7 +949,8 @@ $text-color:  #999999;
 
             .p3 {
                 @include flex-column();
-                align-items: center;
+                // align-items: center;
+                @include align-items-center;
 
                 .img3 {
                     width: convertPxFormUI(220px);
@@ -878,7 +968,8 @@ $text-color:  #999999;
 
             .p4 {
                 @include flex-column();
-                align-items: center;
+                // align-items: center;
+                @include align-items-center;
 
                 .img4 {
                     width: convertPxFormUI(220px);
@@ -902,7 +993,8 @@ $text-color:  #999999;
     height: auto;
 
     @include flex-column();
-    align-items: center;
+    // align-items: center;
+    @include align-items-center;
 
     .banner {
         width: $container-width;
@@ -939,7 +1031,8 @@ $text-color:  #999999;
 
         .address {
             @include flex-column();
-            align-items: center;
+            // align-items: center;
+            @include align-items-center;
             margin-top: convertPxFormUI(35px);
             margin-bottom: convertPxFormUI(35px);
             
@@ -962,7 +1055,8 @@ $text-color:  #999999;
     height: auto;
 
     @include flex-column();
-    align-items: center;
+    // align-items: center;
+    @include align-items-center;
 
     .banner {
         width: $container-width;
@@ -1070,8 +1164,10 @@ $text-color:  #999999;
     width: $container-width;
     height: auto;
     @include flex-column();
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
+    @include justify-content-center;
+    @include align-items-center;
 
     .banner {
         width: $container-width;
@@ -1084,7 +1180,8 @@ $text-color:  #999999;
         width: $container-width;
         background-color: white;
         @include flex-column();
-        align-items: center;
+        // align-items: center;
+        @include align-items-center;
         padding-top: convertPxFormUI(38px);
 
 
@@ -1099,8 +1196,10 @@ $text-color:  #999999;
                 // background-color: $container-color;
                 margin-left: convertPxFormUI(54px);
                 @include flex-row();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
                 @include wordspace();
                 @include text-font-x();
                 color:  $title-color ;
@@ -1122,8 +1221,10 @@ $text-color:  #999999;
                 // background-color: $container-color;
                 margin-left: convertPxFormUI(54px);
                 @include flex-row();
-                justify-content: center;
-                align-items: center;
+                // justify-content: center;
+                // align-items: center;
+                @include justify-content-center;
+                @include align-items-center;
                 @include wordspace();
                 @include text-font-x();
                 cursor: pointer;
@@ -1194,14 +1295,27 @@ $text-color:  #999999;
         padding: convertPxFormUI(50px);
 
         .p {
-            @include box-p;
+            // @include box-p;
             margin-bottom: convertPxFormUI(40px);
+            @include flex-column();
+            // justify-content: center;
+            // align-items: center;
+            @include justify-content-center;
+            @include align-items-center;
+            
+            div {
+                line-height: convertPxFormUI(40px);
+                letter-spacing: 0;
+                color: $title-color;
+            }
         }
 
         .line {
             @include flex-row();
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
+            @include justify-content-center;
+            @include align-items-center;
 
             .whippletree {
                 width: convertPxFormUI(960px);
@@ -1390,13 +1504,18 @@ body {
    */
   .container {
     /* display: inline-flex; */
-    display: flex;
-    display: -webkit-flex;
+    // display: flex;
+    // display: -webkit-flex;
     /* -moz-box-flex: inherit; */
     /* display: -webkit-inline-flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // flex-direction: column;
+    @include flex-column();
+    // align-items: center;
+    // justify-content: center;
+    // @include justify-content-center;
+    // @include align-items-center;
+    @include justify-content-center;
+    @include align-items-center;
     background-color: whitesmoke;
     flex: 1;
   }
@@ -1405,11 +1524,15 @@ body {
     height: 10rem;
     background-color: #fff;
     width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
+    
     opacity: 0.98;
     position:fixed; top:0px; left:0px;
     z-index: 100;
@@ -1421,10 +1544,13 @@ body {
     /* background-color: aqua; */
     width: convertPxFormUI(224px);
     height: convertPxFormUI(41px);
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    @include flexbox();
+    // justify-content: center;
+    // align-items: center;
+    @include justify-content-center;
+    @include align-items-center;
     margin-top: 1rem;
   }
 
@@ -1435,9 +1561,10 @@ body {
   }
 
   .navbar {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flex-row;
     /* background-color: bisque; */
     /* width: 28rem; */
     /* justify-content: center; */
@@ -1472,22 +1599,30 @@ body {
     /* height: 80rem; */
     height: auto;
     width: auto;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-direction: column;
+    // @include flexbox;
+    @include flex-column();
+    // align-items: center;
+    // justify-content: center;
+    @include justify-content-center;
+    @include align-items-center;
     /* background-color: #FA6C05; */
   }
 
   .footer {
     height: 10rem;
     width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    @include flexbox;
+    @include flex-column();
+    @include justify-content-center;
+    @include align-items-center;
     background-color: white;
     /* background-color: #FA6C05; */
   }
@@ -1523,11 +1658,15 @@ body {
 }
 
 .h-wecando {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // align-items: center;
+    // justify-content: center;
+    @include flexbox;
+    @include flex-column();
+    @include justify-content-center;
+    @include align-items-center;
     /* margin-top: convertPxFormUI(61px); */
     background: #FFF7F7;
     padding-top: convertPxFormUI(61px);
@@ -1536,19 +1675,26 @@ body {
 
 .h-wecando .box {
     /* background-color: gray; */
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column();
+    @include justify-content-center;
+    @include align-items-center;
     margin-top: convertPxFormUI(54px);
 }
 
 .h-wecando .top {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    // justify-content: space-around;
+    @include flexbox;
+    @include flex-row();
+    @include spacearround();
 }
 
 .h-wecando .top .left {
@@ -1556,11 +1702,14 @@ body {
     height: convertPxFormUI(504px);
     margin-right: convertPxFormUI(23px);
     /* background-color: forestgreen; */
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    @include flexbox;
+    @include flex-column;
     /* justify-content: center; */
-    align-items: center;
+    // align-items: center;
+    @include align-items-center;
 }
 
 .h-wecando .top .left .img {
@@ -1594,20 +1743,26 @@ body {
     height: convertPxFormUI(504px);
     /* background-color: forestgreen; */
     
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: space-around;
+    @include flexbox;
+    @include flex-column;
+    @include spacearround();
 }
 
 .h-wecando .top .right .tttt {
     width: convertPxFormUI(520px);
     height: convertPxFormUI(248px);
     /* background-color: dimgray; */
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    // justify-content: space-around;
+    @include flexbox;
+    @include flex-row();
+    @include spacearround();
     background-image: url("../image/home/chayi .png");
     -webkit-background-size:cover;
     -moz-background-size: cover;
@@ -1625,10 +1780,13 @@ body {
     height: convertPxFormUI(248px);
     background-color: white;
     opacity: 0.6;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
 }
 
 .h-wecando .top .right .tttt .r p {
@@ -1648,9 +1806,10 @@ body {
     -o-background-size: cover;
     background-size: cover;
     margin-top: convertPxFormUI(10px);
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flex-row;
     transition-duration: 0.7s;
 }
 
@@ -1664,10 +1823,13 @@ body {
     height: convertPxFormUI(248px);
     background-color: #fff;
     opacity: 0.6;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
 }
 
 .h-wecando .bottom {
@@ -1675,10 +1837,13 @@ body {
     height: convertPxFormUI(240px);
     margin-top: convertPxFormUI(20px);
     background-image: url("../image/home/wecando-b.png");
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    // justify-content: space-around;
+    @include flexbox();
+    @include flex-row();
+    @include spacearround();
 }
 
 .h-wecando .bottom .blank {
@@ -1690,11 +1855,15 @@ body {
     height: convertPxFormUI(240px);
     background-color: white;
     opacity: 0.6;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
     /* padding-top: convertPxFormUI(64px); */
     padding-left: convertPxFormUI(24px);
     padding-right: convertPxFormUI(24px);
@@ -1713,33 +1882,61 @@ body {
 }
 
 .h-products {
-    display: flex;
-    display: -webkit-flex;
+    // display: flex;
+    // display: -webkit-flex;
     background: #F7FFFF;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include align-items-center;
+    @include justify-content-center;
     height: convertPxFormUI(873px);
 }
 
 .h-products .product-series {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include align-items-center;
+    @include justify-content-center;    
 }
 
 .h-products .product-series .product-swiper {
-    width: convertPxFormUI(900px);
+    width: convertPxFormUI(950px);
     /* background-color: deepskyblue; */
     height: convertPxFormUI(265px);
     margin-top: convertPxFormUI(42px);
     margin-bottom: convertPxFormUI(61px);
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
-    justify-content: space-between;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    // justify-content: center;
+    @include flexbox;
+    @include flex-row();
+    @include justify-content-center;
+    // align-items: center;
+
+    .swiper-container {
+        .swiper-wrapper {
+            .slider-item {
+                .slide-content {
+                    .swiper-img {
+                        width: convertPxFormUI(220px);
+                        height: convertPxFormUI(220px);
+                        object-fit: cover;
+                        // margin-left: 10px;
+                        // margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .h-products .product-series .product-swiper .p1 {
@@ -1826,19 +2023,25 @@ body {
 .h-store-distribution {
     height: convertPxFormUI(792px);
     background: #FFFEF7;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
     /* justify-content: center; */
-    align-items: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
     padding-top: convertPxFormUI(59px);
     display: none;
 }
 
 .h-store-distribution .mapbox {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flexbox;
+    @include flex-row();
     margin-top: convertPxFormUI(40px);
 }
 
@@ -1849,10 +2052,13 @@ body {
 }
 
 .h-store-distribution .mapbox .alalytics {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: space-around;
+    @include flexbox;
+    @include flex-column;
+    @include spacearround();
 }
 
 .h-store-distribution .mapbox .alalytics .item {
@@ -1861,9 +2067,10 @@ body {
     margin-left: convertPxFormUI(110px);
     /* margin-bottom: convertPxFormUI(40px); */
     /* background-color: darkseagreen; */
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flex-row;
 }
 
 .h-store-distribution .mapbox .alalytics .item .icon {
@@ -1891,22 +2098,29 @@ body {
 .h-cooperation-process {
     height: convertPxFormUI(560px);
     background: #FFF7F7;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
     padding-top: convertPxFormUI(65px);
     padding-bottom: convertPxFormUI(65px);
-    
 }
 
 .h-cooperation-process .process-list {
     margin-top: convertPxFormUI(62px);
-    display: flex;
-    display: -webkit-flex;    
-    flex-flow: row;
-    justify-content: space-around;
+    // display: flex;
+    // display: -webkit-flex;    
+    // flex-flow: row;
+    // justify-content: space-around;
+    @include flexbox();
+    @include flex-row();
+    @include spacearround();
+
     width: convertPxFormUI(972px);
     /* border: skyblue solid convertPxFormUI(1px); */
     margin-bottom: convertPxFormUI(160px);
@@ -1917,9 +2131,11 @@ body {
     height: convertPxFormUI(120px); */
     /* background-color: cyan; */
     /* margin-right: convertPxFormUI(58px); */
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    @include flexbox;
+    @include flex-column;
 }
 
 .h-cooperation-process .process-list .process-item .avator01 {
@@ -1978,10 +2194,14 @@ body {
 
 
 .h-cooperation-process .process-list .process-item .text {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include align-items-center;
+
     width: convertPxFormUI(119px);
     height: convertPxFormUI(48px);
 }
@@ -2004,10 +2224,14 @@ body {
     /* background: #FFFFFF; */
     border: convertPxFormUI(1px) solid #554c4c;
     cursor: pointer;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    // @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
 }
 
 
@@ -2018,10 +2242,13 @@ body {
     /* background: #FFFFFF; */
     border: convertPxFormUI(1px) solid #FFF7F7;
     cursor: pointer;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include justify-content-center;
+    @include align-items-center;
     color: #FA6C05;
     /* background-color: #FA6C05; */
     background-color: transparent;
@@ -2040,17 +2267,23 @@ body {
 .h-aboutus {
     height: convertPxFormUI(740px);
     background: #F7FFFF;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
 }
 
 .h-aboutus .content {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flexbox;
+    @include flex-row();
 }
 
 .h-aboutus .content .text {
@@ -2062,10 +2295,13 @@ body {
 }
 
 .h-aboutus .content .text .title {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include justify-content-center;
+    @include align-items-center;
     margin-bottom: convertPxFormUI(33px);
 }
 
@@ -2082,19 +2318,27 @@ body {
 .h-news {
     height: convertPxFormUI(629px);
     background: #FFFEF7;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
 }
 
 .h-news .news-list {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    // justify-content: space-around;
+    // align-items: center;
+    @include flexbox;
+    @include flex-row();
+    @include spacearround();
+    @include align-items-center;
     width: convertPxFormUI(1059px);
     margin-top: convertPxFormUI(57px);
 }
@@ -2102,11 +2346,14 @@ body {
 .h-news .news-list .news-item {
     width: convertPxFormUI(317px);
     height: convertPxFormUI(420px);
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    /* justify-content: center; */
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // /* justify-content: center; */
+    // align-items: center;
+    @include flexbox;
+    @include flex-column;
+    @include align-items-center;
     /* background-color: skyblue; */
 }
 
@@ -2114,30 +2361,33 @@ body {
     width: convertPxFormUI(317px);
     height: convertPxFormUI(220px);
     background-image: url("../image/home/new01.png");
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // -webkit-background-size:cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    @include image-resize();
 }
 
 .h-news .news-list .news-item .img02 {
     width: convertPxFormUI(317px);
     height: convertPxFormUI(220px);
     background-image: url("../image/home/new02.png");
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // -webkit-background-size:cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    @include image-resize();
 }
 
 .h-news .news-list .news-item .img03 {
     width: convertPxFormUI(317px);
     height: convertPxFormUI(220px);
     background-image: url("../image/home/new03.png");
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // -webkit-background-size:cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    @include image-resize();
 }
 
 .h-news .news-list .news-item .title {
@@ -2158,11 +2408,13 @@ line-height: convertPxFormUI(28px);
 .h-news .news-list .news-item .b {
     /* margin-top: convertPxFormUI(11.1px); */
     margin-top: convertPxFormUI(15.9px);
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flex-row;
     width: convertPxFormUI(317px);
-    justify-content: center;
+    // justify-content: center;
+    @include justify-content-center();
 }
 
 .h-news .news-list .news-item .b .count img {
@@ -2181,17 +2433,21 @@ line-height: convertPxFormUI(28px);
 .h-contact-us-img {
     background: rgba(255,255,255,0.96);
     height: convertPxFormUI(545px);
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
 }
 
 .h-contact-us .section {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: row;
+    @include flex-row;
     height: convertPxFormUI(280px);
     margin-top: convertPxFormUI(64px);
 }
@@ -2205,9 +2461,10 @@ line-height: convertPxFormUI(28px);
 }
 
 .h-contact-us .section .phonenumber {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
+    // display: flex;
+    // display: -webkit-flex;
+    // flex-flow: column;
+    @include flex-column;
     /* justify-content: space-between; */
     /* align-items: center; */
     margin-top: convertPxFormUI(64px);

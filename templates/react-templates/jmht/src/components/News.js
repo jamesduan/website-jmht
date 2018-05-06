@@ -21,7 +21,7 @@ export default class News extends Component {
                             <div className="b">
                                 <div className="time">2018-4-12</div>
                                 <div className="eye"><img src={eye} alt=""/></div>
-                                <div className="n">27</div>
+                                <div className="n">6130</div>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ export default class News extends Component {
                             <div className="b">
                                 <div className="time">2018-4-10</div>
                                 <div className="eye"><img src={eye} alt=""/></div>
-                                <div className="n">27</div>
+                                <div className="n">7107</div>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ export default class News extends Component {
                             <div className="b">
                                 <div className="time">2018-4-10</div>
                                 <div className="eye"><img src={eye} alt=""/></div>
-                                <div className="n">28</div>
+                                <div className="n">8901</div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default class News extends Component {
                             <div className="b">
                                 <div className="time">2018-4-10</div>
                                 <div className="eye"><img src={eye} alt=""/></div>
-                                <div className="n">30</div>
+                                <div className="n">8312</div>
                             </div>
                         </div>
                     </div>

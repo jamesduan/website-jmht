@@ -3,6 +3,23 @@ import ReactSwiper from "reactjs-swiper"
 // import '../css/home.css'
 import eye from '../image/home/eye.svg'
 import banner1 from '../image/home/home_banner1.jpg'
+import t1 from '../image/home/p01.jpg'
+import t3 from '../image/home/p03.jpg'
+import t4 from '../image/home/p04.jpg'
+import t5 from '../image/home/p05.jpg'
+import t6 from '../image/home/p06.jpg'
+import t7 from '../image/home/p07.jpg'
+import t8 from '../image/home/p08.jpg'
+import t9 from '../image/home/p09.jpg'
+import t10 from '../image/home/p10.jpg'
+
+import r1 from '../image/home/r01.jpg'
+import r2 from '../image/home/r02.jpg'
+import r3 from '../image/home/r03.jpg'
+import r4 from '../image/home/r04.jpg'
+import r5 from '../image/home/r05.jpg'
+import r6 from '../image/home/r06.jpg'
+import r7 from '../image/home/r07.jpg'
 
 export default class Home extends Component {
 
@@ -15,6 +32,76 @@ export default class Home extends Component {
     }
 
     render() {
+        const teaItems = [{
+            image: t1,
+            title: ''
+        },
+        {
+            image: t5,
+            title: ''
+        },
+        {
+            image: t3,
+            title: ''
+        },
+        {
+            image: t4,
+            title: ''
+        },
+        {
+            image: t6,
+            title: ''
+        },
+        {
+            image: t7,
+            title: ''
+        },
+        {
+
+            image: t8,
+            title: ''
+        },
+        {
+
+            image: t9,
+            title: ''
+        },
+        {
+            image: t10,
+            title: ''
+        }];
+
+        const rItems = [{
+            image: r1,
+            title: ''
+        },
+        {
+            image: r2,
+            title: ''
+        },
+        {
+            image: r3,
+            title: ''
+        },
+        {
+            image: r4,
+            title: ''
+        },
+        {
+            image: r5,
+            title: ''
+        },
+        {
+            image: r6,
+            title: ''
+        },
+        {
+
+            image: r7,
+            title: ''
+        }
+       ];
+
         const items = [{
             image: banner1,
             title: '图片1',
@@ -31,18 +118,48 @@ export default class Home extends Component {
         }]
         const swiperOptions = {
             preloadImages: true,
-            autoplay: 30000,
+            autoplay: 3000,
             autoplayDisableOnInteraction: false,
-            // loop: true,
-            // slidesPerView : 1.2,
             loop: true,
             slidesPerView: 'auto',
             loopedSlides: 8,
         };
+
+        const teaOptions = {
+            preloadImages: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            // effect : 'coverflow',
+            // slidesPerView: 3,
+            // centeredSlides: true,
+            // navigation: {
+            //     nextEl: '.tea-swiper-button-next',
+            //     prevEl: '.tea-swiper-button-prev',
+            // },
+        }
+        const rOptions = {
+            preloadImages: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            // effect : 'coverflow',
+            // slidesPerView: 3,
+            // centeredSlides: true,
+            // navigation: {
+            //     nextEl: '.r-swiper-button-next',
+            //     prevEl: '.r-swiper-button-prev',
+            // },
+        }
+
         return (
             <div className="h-content">
                 {/* <div className="h-swiper"> */}
-                <ReactSwiper swiperOptions={swiperOptions} showPagination items={items} className="h-swiper" />
+                <ReactSwiper options={swiperOptions} showPagination items={items} className="h-swiper" />
                 {/* </div> */}
                 <div className="h-wecando">
                     <div className="title xl-font g-default-color">关于九亩花田</div>
@@ -90,19 +207,25 @@ export default class Home extends Component {
                     <div className="product-series">
                         <div className="title xl-font g-default-color">茶饮系列</div>
                         <div className="product-swiper">
-                            <div className="p1"></div>
+                            {/* <div className="p1"></div>
                             <div className="p2"></div>
                             <div className="p3"></div>
-                            <div className="p4"></div>
+                            <div className="p4"></div> */}
+                            <ReactSwiper items={teaItems} options={teaOptions} showPagination={true}></ReactSwiper>
+                            <div className="tea-swiper-button-next"></div>
+                            <div className="tea-swiper-button-prev"></div>
                         </div>
                     </div>
                     <div className="product-series">
                         <div className="title xl-font g-default-color">软欧包系列</div>
                         <div className="product-swiper">
-                            <div className="r1"></div>
+                            {/* <div className="r1"></div>
                             <div className="r2"></div>
                             <div className="r3"></div>
-                            <div className="r4"></div>
+                            <div className="r4"></div> */}
+                            <ReactSwiper items={rItems} options={rOptions} showPagination={true}></ReactSwiper>
+                            <div className="tea-swiper-button-next"></div>
+                            <div className="tea-swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>

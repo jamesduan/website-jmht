@@ -14,6 +14,9 @@ import {
   HashRouter as Router,
 } from 'react-router-dom'
 
+import initReactFastclick from 'react-fastclick';
+initReactFastclick();
+
 function App() {
   return (
     <Container>

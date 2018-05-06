@@ -30,7 +30,20 @@ const Intro = (props) => {
 const Evolution = (props) => {
     return (
         <div className="evo">
-            <div className="p">从创业肇端，到发展壮大，本源健康产业一路求索，一路向往。公司本着“万物之本，包罗万象，源源不断”的品牌理念，以“大善若水“为品牌内涵，对产品严格品控，层层把关，为消费者提供天然、健康的品质生活。20多年，本源一直用心努力做好一件事，20多年，本源因为专注所以专业，20多年，本源因为专业所以领先。</div>
+            <div className="p">
+                <div>
+                    从创业肇端，到发展壮大，本源健康产业一路求索，一路向往。<br />
+                </div>
+                <div>
+                    公司本着“万物之本，包罗万象，源源不断”的品牌理念。<br />
+                </div>
+                <div>
+                    以“大善若水“为品牌内涵，对产品严格品控，层层把关，为消费者提供天然、健康的品质生活。<br />
+                </div>
+                <div>
+                    20多年，本源一直用心努力做好一件事，20多年，本源因为专注所以专业，20多年，本源因为专业所以领先。<br />
+                </div>
+            </div>
 
             <div className="line">
                 <div className="whippletree"></div>
@@ -192,13 +205,13 @@ const BrandStory = (props) => {
                 <div className="text">
                     <div className="t">九亩花田</div>
                     <div className="ppp">
-                        茶香喉，沁心田<br/>
-                        味芳醇，意缱绻<br/>
-                        九亩花田<br/>
-                        九亩方圆，阳光一片<br/>
-                        花田锦绣，芳华明媚<br/>
-                        万物美好<br/>
-                        你在中央<br/>
+                        茶香喉，沁心田<br />
+                        味芳醇，意缱绻<br />
+                        九亩花田<br />
+                        九亩方圆，阳光一片<br />
+                        花田锦绣，芳华明媚<br />
+                        万物美好<br />
+                        你在中央<br />
                     </div>
                 </div>
             </div>

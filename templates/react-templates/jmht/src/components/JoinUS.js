@@ -40,13 +40,20 @@ const Advantage = (props) => {
 const Aptitude = (props) => {
     return (
         <div className="aptitude">
-            <div className="p">
-                公司合伙开店体系有着稳定踏实的经营策略，及强而有力的市场趋势，给合伙人提供更多帮助，减低经营风险，稳定获利。
-                公司具有完备的后勤支援管道，让九亩花田合伙人无后顾之忧，并以相互合理服务，良好的疏通到店原则，与创业合伙人一同开创事业的成功。
+            <div className="p1">
+                <div>
+                    公司合伙开店体系有着稳定踏实的经营策略，及强而有力的市场趋势，给合伙人提供更多帮助，减低经营风险，稳定获利。<br/>
+                </div>
+                <div>
+                    公司具有完备的后勤支援管道，让九亩花田合伙人无后顾之忧，并以相互合理服务，良好的疏通到店原则，与创业合伙人一同开创事业的成功。<br/>
+                </div>
             </div>
-            <div className="img"><div className="i"></div></div>
+            <div className="img">
+                <div className="i"></div>
+            </div>
             <div className="title">申请者需要符合</div>
-            <div className="p" style={{ marginTop: 10 }}>1、认同“九亩花田”的商标、产品、经营理念和企业文化。<br />
+            <div className="p" style={{ marginTop: 10 }}>
+                1、认同“九亩花田”的商标、产品、经营理念和企业文化。<br />
                 2、在相关的行业中有很好的企业人员管理经验。<br />
                 3、愿意从事“九亩花田”事业的经营管理。<br />
                 4、愿意按照公司的制度处理日常经营事宜。<br />
