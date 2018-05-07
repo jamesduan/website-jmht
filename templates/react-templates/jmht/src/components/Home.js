@@ -100,7 +100,7 @@ export default class Home extends Component {
             image: r7,
             title: ''
         }
-       ];
+        ];
 
         const items = [{
             image: banner1,
@@ -314,10 +314,10 @@ export default class Home extends Component {
                     <div className="content">
                         <div className="text">
                             <div className="title g-default-color x-font font-space">20年专注健康生活服务产业</div>
-                            <p className="g-default-color g-line-height" >广州本源健康产业有限公司，是一家多元化发展的企业，涉猎四大产业：餐饮连锁产业、餐饮原料产业、茶业产业、美妆服务产业。
-
-公司创办已有20多年历史，并于2015年在广州股权交易中心挂牌上市。公司本着“万物之本，包罗万象，源源不断”的品牌理念，以“上善若水“为品牌内涵，对产品严格品控，层层把关，致力于为消费者提供健康、有品质的生活。
-</p>
+                            <p className="g-default-color g-line-height">
+                                广州本源健康产业有限公司，是一家多元化发展的企业，涉猎四大产业：餐饮连锁产业、餐饮原料产业、茶业产业、美妆服务产业。<br/>
+                                公司创办已有20多年历史，并于2015年在广州股权交易中心挂牌上市。公司本着“万物之本，包罗万象，源源不断”的品牌理念，以“上善若水“为品牌内涵，对产品严格品控，层层把关，致力于为消费者提供健康、有品质的生活。
+                            </p>
                         </div>
                         <div className="coperation-introduce"></div>
                     </div>
@@ -332,7 +332,7 @@ export default class Home extends Component {
                             <div className="content l-font g-default-color">不能想象，乡下的老茶馆若是消失了，那人们还怎么活下去。那茶叶，粗的；那茶壶，不但粗，还拙笨。窑场上的废壶，瘪的无…</div>
                             <div className="b">
                                 <div className="time">2018-04-10</div>
-                                <div className="count"><img src={eye} alt="查看"/></div>
+                                <div className="count"><img src={eye} alt="查看" /></div>
                                 <div className="num">17</div>
                             </div>
                         </div>
@@ -342,7 +342,7 @@ export default class Home extends Component {
                             <div className="content l-font g-default-color">茶，解渴清心，以品为上。茶滋于水，水籍乎器。茶汤无形，无器不盛。器，为茶之父，道由器传。由茶和器而入的茶道，是…</div>
                             <div className="b">
                                 <div className="time">2018-04-12</div>
-                                <div className="count"><img src={eye} alt=""/></div>
+                                <div className="count"><img src={eye} alt="" /></div>
                                 <div className="num">9</div>
                             </div>
                         </div>
@@ -352,7 +352,7 @@ export default class Home extends Component {
                             <div className="content g-default-color">不能想象，乡下的老茶馆若是消失了，那人们还怎么活下去。那茶叶，粗的；那茶壶，不但粗，还拙笨。窑场上的废壶，瘪的无…</div>
                             <div className="b">
                                 <div className="time">2018-04-12</div>
-                                <div className="count"><img src={eye} alt=""/></div>
+                                <div className="count"><img src={eye} alt="" /></div>
                                 <div className="num">26</div>
                             </div>
                         </div>
