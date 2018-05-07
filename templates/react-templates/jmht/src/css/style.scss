@@ -157,6 +157,7 @@ $text-color:  #999999;
     margin-top: convertPxFormUI(47px);
 }
 
+
 .product {
     width: $container-width;
     height: auto;
@@ -1417,9 +1418,20 @@ $text-color:  #999999;
 body {
     /* font: 16px "PingFang SC", PingFang, sans-serif; */
     /* font-family: PingFangSC-Light; */
-    font-family: "PingFang SC Light" "HanHei-SC","Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
+    font-family: "PingFang SC Light", "Microsoft YaHei", "HanHei-SC","Segoe UI","Lucida Grande",Helvetica,Arial,FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
     /* margin: 20px; */
     margin: auto;
+    ::selection
+    {
+        color: white;
+        background-color: $globalcolor;
+    }
+
+    ::-moz-selection
+    {
+        color: white;
+        background-color: $globalcolor;
+    }
   }
 
   .s-font {
@@ -1574,11 +1586,18 @@ body {
     font-size: convertPxFormUI(18px);
   }
 
+  .ant-btn {
+    border: 0px solid transparent;
+  }
+
   .navbar .link {
     text-decoration:none; 
     color: #585755;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    .box {
+        display: none;
+    }
   }
 
   .navbar .link:hover {
@@ -1586,6 +1605,18 @@ body {
     color: $globalcolor;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    position: relative;
+    .box {
+        display: block;
+        position: absolute;
+        width: convertPxFormUI(80px);
+        color: $title-color;
+        @include flex-column;
+        padding-top: convertPxFormUI(10px);
+        padding-bottom: convertPxFormUI(10px);
+        -moz-box-shadow: 5px 5px 5px #888888; /* 老的 Firefox */
+        box-shadow: 5px 5px 5px #888888;
+    }
   }
 
   /* .navbar div:hover{
