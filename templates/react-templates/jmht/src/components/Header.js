@@ -27,14 +27,14 @@ export default class Header extends Component {
                     <Link style={{ color: this.state.navClicked === "product" ? linkColor : "" }} onClick={() => { this.setState({ navClicked: 'product' }) }} to="/product" className="link">产品</Link>
                     <Link style={{ color: this.state.navClicked === "joinus" ? linkColor : "" }} onClick={() => { this.setState({ navClicked: 'joinus' }) }} to="/joinus" className="link">合作</Link>
                     <Link style={{ color: this.state.navClicked === "contact" ? linkColor : "" }} onClick={() => { this.setState({ navClicked: 'contact' }) }} to="/contactus" className="link">联系</Link>
-                    <Link style={{ color: this.state.navClicked === "aboutus" ? linkColor : "" }} onClick={() => { this.setState({ navClicked: 'aboutus' }) }} to="/aboutus" className="link">
+                    {/* <Link style={{ color: this.state.navClicked === "aboutus" ? linkColor : "" }} onClick={() => { this.setState({ navClicked: 'aboutus' }) }} to="/aboutus" className="link">
                         关于
                         <div className="box">
                             <div>企业简介</div>
                             <div>发展历程</div>
                             <div>品牌故事</div>
                         </div>
-                    </Link>
+                    </Link> */}
                     {/* <Dropdown overlay={menu} placement="bottomCenter">
                         <Button onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={this.state.hovered ? styles.aboutbutton : styles.nonebutton}>关于</Button>
                     </Dropdown> */}
